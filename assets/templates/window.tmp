@@ -1,0 +1,11 @@
+
+<div class="window__container">
+    <header class="window__header-container">
+        <div class="header__title">
+            <span>${this.title}</span>
+        </div>
+        <div class="header__actions"></div>
+    </header>
+    <section class="window__content-container" data-role="context"></section>
+    ${this.footer}
+</div>

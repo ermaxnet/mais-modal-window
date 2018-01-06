@@ -1,0 +1,34 @@
+{
+  "name": "mais-modal-window",
+  "version": "0.0.1",
+  "description": "A simple modal window on ES6+ with ability to change the window markup template",
+  "main": "./assets/src/window.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "modal",
+    "window",
+    "es6",
+    "templates",
+    "css"
+  ],
+  "author": "Max Eremin",
+  "license": "OSL-3.0",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "jquery": "^3.2.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.36",
+    "@babel/preset-env": "^7.0.0-beta.36",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-syntax-async-generators": "^6.13.0",
+    "css-loader": "^0.28.8",
+    "html-es6-template-loader": "^1.0.5",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
+  }
+}

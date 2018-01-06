@@ -1,0 +1,124 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transform";
+@import "compass/reset/utilities";
+@import "compass/css3/transition";
+@import "compass/css3/animation";
+
+@include keyframes(open-animation) {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@include keyframes(close-animation) {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+$overlay-bg-color: #455A64;
+$primary-text-color: rgba(0,0,0,.87);
+$secondary-text-color: rgba(0,0,0,.54);
+$compatible-fonts: "Lato", Helvetica, Arial, sans-serif;
+
+.window-overlay {
+    background-color: rgba($overlay-bg-color, .6);
+}
+
+.window__container {
+    background-color: #ffffff;
+    @include border-radius(4px);
+    @include box-shadow(0 10px 6px -6px $overlay-bg-color);
+    font-family: $compatible-fonts;
+    color: $primary-text-color;
+
+    &.play-open-animation {
+        @include animation(open-animation 500ms ease 0s 1 normal backwards);
+    }
+
+    &.play-close-animation {
+        @include animation(close-animation 500ms ease 0s 1 normal backwards);
+    }
+}
+
+.window__header-container {
+    position: relative;
+
+    .header__title {
+        width: 100%;
+        padding: 0 28px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 72px;
+        color: $secondary-text-color;
+        text-transform: uppercase;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+    }
+
+    .header__actions {
+        position: absolute;
+        width: auto;
+        height: 72px;
+        line-height: normal;
+        right: 0;
+        top: 0;
+        background-color: white;
+
+        .header__actions-list {
+            @include reset-list-style;
+            display: block;
+            position: relative;
+            height: 72px;
+
+            .window_action {
+                display: inline-block;
+                font-weight: 900;
+                font-size: 20px;
+                line-height: 72px;
+                vertical-align: top;
+                padding: 0 28px;
+
+                span {
+                    cursor: pointer;
+                    display: inline;
+                    color: rgba(0,0,0,.36);
+                    @include transition(color 250ms 0s ease);
+
+                    &:hover {
+                        color: $secondary-text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.window__content-container {
+    padding: 21px 28px; 
+    font-weight: 400; 
+    font-size: 16px;
+    line-height: 20px;  
+}
+
+.window__footer-container {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    color: $secondary-text-color;
+}

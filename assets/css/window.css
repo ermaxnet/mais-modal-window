@@ -1,0 +1,122 @@
+@-moz-keyframes open-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes open-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes open-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes close-animation {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes close-animation {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes close-animation {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+/* line 37, ../scss/window.scss */
+.window-overlay {
+  background-color: rgba(69, 90, 100, 0.6); }
+
+/* line 41, ../scss/window.scss */
+.window__container {
+  background-color: #ffffff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 10px 6px -6px #455A64;
+  -webkit-box-shadow: 0 10px 6px -6px #455A64;
+  box-shadow: 0 10px 6px -6px #455A64;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.87); }
+  /* line 48, ../scss/window.scss */
+  .window__container.play-open-animation {
+    -moz-animation: open-animation 500ms ease 0s 1 normal backwards;
+    -webkit-animation: open-animation 500ms ease 0s 1 normal backwards;
+    animation: open-animation 500ms ease 0s 1 normal backwards; }
+  /* line 52, ../scss/window.scss */
+  .window__container.play-close-animation {
+    -moz-animation: close-animation 500ms ease 0s 1 normal backwards;
+    -webkit-animation: close-animation 500ms ease 0s 1 normal backwards;
+    animation: close-animation 500ms ease 0s 1 normal backwards; }
+
+/* line 57, ../scss/window.scss */
+.window__header-container {
+  position: relative; }
+  /* line 60, ../scss/window.scss */
+  .window__header-container .header__title {
+    width: 100%;
+    padding: 0 28px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 72px;
+    color: rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip; }
+  /* line 73, ../scss/window.scss */
+  .window__header-container .header__actions {
+    position: absolute;
+    width: auto;
+    height: 72px;
+    line-height: normal;
+    right: 0;
+    top: 0;
+    background-color: white; }
+    /* line 82, ../scss/window.scss */
+    .window__header-container .header__actions .header__actions-list {
+      list-style: none;
+      display: block;
+      position: relative;
+      height: 72px; }
+      /* line 88, ../scss/window.scss */
+      .window__header-container .header__actions .header__actions-list .window_action {
+        display: inline-block;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 72px;
+        vertical-align: top;
+        padding: 0 28px; }
+        /* line 96, ../scss/window.scss */
+        .window__header-container .header__actions .header__actions-list .window_action span {
+          cursor: pointer;
+          display: inline;
+          color: rgba(0, 0, 0, 0.36);
+          -moz-transition: color 250ms ease 0s;
+          -o-transition: color 250ms ease 0s;
+          -webkit-transition: color 250ms ease;
+          -webkit-transition-delay: 0s;
+          transition: color 250ms ease 0s; }
+          /* line 102, ../scss/window.scss */
+          .window__header-container .header__actions .header__actions-list .window_action span:hover {
+            color: rgba(0, 0, 0, 0.54); }
+
+/* line 111, ../scss/window.scss */
+.window__content-container {
+  padding: 21px 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px; }
+
+/* line 118, ../scss/window.scss */
+.window__footer-container {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 36px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54); }

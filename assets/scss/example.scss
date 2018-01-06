@@ -1,0 +1,37 @@
+@import "compass/css3/box-sizing";
+@import "compass/reset/utilities";
+
+/* Variables 
+*/
+$text-color: rgba(0, 0, 0, .87);
+$fill-background-color: rgba(220, 220, 220, 0.4);
+
+@include global-reset;
+
+*,
+*:after,
+*:before {
+    @include reset-focus;
+    @include box-sizing(border-box);
+}
+
+html {
+    height: 100%!important;
+    font-size: 54px;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    min-height: 100%;
+    color: $text-color;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-color: $fill-background-color;
+}
